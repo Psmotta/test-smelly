@@ -28,3 +28,25 @@ Siga os passos abaixo para preparar seu ambiente de trabalho.
 git clone [URL_DO_SEU_FORK_DO_REPOSITORIO]
 cd test-smelly
 ```
+
+## Entrega
+
+Trabalho de Pedro de Sousa Motta para a disciplina de Teste de Software.
+
+| Item | Local |
+|------|-------|
+| Suíte original, sem alterações | `test/userService.smelly.test.js` |
+| Suíte refatorada | `__tests__/userService.clean.test.js` |
+| Configuração do ESLint | `.eslintrc.json` (ESLint 8.57 + `eslint-plugin-jest`) |
+| Relatório | `RELATORIO.pdf` |
+
+O enunciado pede o arquivo limpo em `__tests__/`. O original continua em `test/`, onde o repositório base o colocou.
+
+Para validar:
+
+```bash
+npm install
+npm test                                        # 2 suítes: 18 testes passam e 1 é ignorado (o test.skip do original)
+npx eslint __tests__/userService.clean.test.js  # nenhum erro ou aviso
+npm run lint                                    # mostra os 6 problemas do arquivo original
+```

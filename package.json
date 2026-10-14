@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@babel/preset-env": "^7.23.2",
